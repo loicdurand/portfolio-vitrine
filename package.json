@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-vitrine",
+  "version": "1.0.0",
+  "description": "Développeur full-stack | PHP, Node.js, React, Rust | En route pour Singapour",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
