@@ -1,0 +1,14 @@
+// frontend/src/styles/main.scss
+$sg-red: #d32f2f;
+$sg-gold: #ffd700;
+$sg-white: #ffffff;
+
+body {
+  background: $sg-white;
+  color: $sg-red;
+}
+.project-card {
+  border: 1px solid $sg-gold;
+  padding: 1rem;
+  margin: 1rem;
+}

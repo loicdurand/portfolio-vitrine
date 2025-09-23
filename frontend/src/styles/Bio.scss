@@ -1,0 +1,12 @@
+// frontend/src/styles/Bio.scss
+$primary-color: #d32f2f; // Rouge Singapour-inspired
+.bio {
+  text-align: center;
+  padding: 2rem;
+  h1 {
+    color: $primary-color;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
