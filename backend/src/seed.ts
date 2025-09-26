@@ -11,6 +11,13 @@ async function seed() {
       id: uuidv4(),
       name: "Portfolio",
       description: "Site vitrine en React/Node",
+      date: new Date().toISOString(),
+    },
+    {
+      id: uuidv4(),
+      name: "Vote",
+      description: "Site de vote en ligne",
+      date: new Date().toISOString(),
     },
   ];
   db.data.posts = [

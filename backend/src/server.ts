@@ -25,8 +25,8 @@ import { Data } from "./db";
     })
 
     .post("/api/projects", async (req, res) => {
-      const { name, description } = req.body;
-      const project = { id: uuidv4(), name, description };
+      const { name, description, date } = req.body;
+      const project = { id: uuidv4(), name, description, date };
       db.data.projects.push(project);
       await db.write();
       res.json(project);

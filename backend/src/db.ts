@@ -1,8 +1,22 @@
 import { join } from "path";
 
+export interface Project {
+  id: string;
+  name: string;
+  description: string;
+  date: string;
+}
+
+export interface Post {
+  id: string;
+  title: string;
+  content: string;
+  date: string;
+}
+
 export interface Data {
-  projects: { id: string; name: string; description: string }[];
-  posts: { id: string; title: string; content: string; date: string }[];
+  projects: Project[];
+  posts: Post[];
 }
 
 async function initDb() {
@@ -11,9 +25,7 @@ async function initDb() {
   const { JSONFile } = await import("lowdb/node");
   const adapter = new JSONFile<Data>(join(__dirname, "db.json"));
   const db = new Low(adapter, { projects: [], posts: [] });
-  // await db.read();
-  // db.data ||= { projects: [], posts: [] };
-  // await db.write();
+
   return db;
 }
 

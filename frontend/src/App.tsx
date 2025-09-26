@@ -1,6 +1,6 @@
 import React from "react";
 import Bio from "./components/Bio";
-import Projects from "./components/Projects";
+import Timeline from "./components/Timeline";
 import Posts from "./components/Posts";
 import { AppProvider } from "./context/AppContext";
 import "./App.scss";
@@ -10,8 +10,7 @@ const App: React.FC = () => {
     <AppProvider>
       <div className="app">
         <Bio />
-        <Projects />
-        <Posts />
+        <Timeline />
       </div>
     </AppProvider>
   );
