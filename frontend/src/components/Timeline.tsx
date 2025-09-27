@@ -40,7 +40,10 @@ const Timeline: React.FC = () => {
             type="radio"
           />
           <div className="label-ctnr">
-            <label htmlFor={`project-${p.id}`}>{p.name}</label>
+            <label htmlFor={`project-${p.id}`}>
+              <i className="fa-brands fa-js"></i>
+              {p.name}
+            </label>
             <span className="date">{dateFormatFR(p.date)}</span>
             <span className="circle"></span>
           </div>
