@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "react-frontend": "npx create-react-app frontend --template typescript"
+    "react-frontend": "npx create-react-app tmp --template typescript"
   },
   "keywords": [],
   "author": "",
