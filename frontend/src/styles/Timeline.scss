@@ -8,6 +8,10 @@
   padding-left: 30px;
   border-left: 8px solid var(--white);
 
+  * {
+    box-sizing: unset;
+  }
+
   li {
     margin: 40px 0;
     position: relative;
@@ -97,7 +101,7 @@
   }
 
   .radio:checked {
-    & + .relative label {
+    & + .rel label {
       cursor: auto;
       transform: translateX(42px);
     }

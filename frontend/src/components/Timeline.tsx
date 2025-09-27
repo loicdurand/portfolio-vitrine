@@ -39,7 +39,7 @@ const Timeline: React.FC = () => {
             name="projects"
             type="radio"
           />
-          <div className="relative">
+          <div className="rel">
             <label htmlFor="project-{p.id}">{p.name}</label>
             <span className="date">{dateFormatFR(p.date)}</span>
             <span className="circle"></span>

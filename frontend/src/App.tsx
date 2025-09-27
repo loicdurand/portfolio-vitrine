@@ -8,9 +8,13 @@ import "./App.scss";
 const App: React.FC = () => {
   return (
     <AppProvider>
-      <div className="app">
+      <div className="app container">
         <Bio />
-        <Timeline />
+        <div className="grid">
+          <div className="col s12">
+            <Timeline />
+          </div>
+        </div>
       </div>
     </AppProvider>
   );

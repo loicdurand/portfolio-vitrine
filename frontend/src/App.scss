@@ -1,7 +1,10 @@
+@use "styles/starter-complet";
+@use "styles/colors";
+
 :root {
-  --bg: #48b379;
+  --bg: var(--green-5);
   --white: #eee9dc;
-  --red: #f98262;
+  --red: #d32f2f; // Rouge Singapour
 }
 
 body {
