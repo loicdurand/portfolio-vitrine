@@ -35,12 +35,12 @@ const Timeline: React.FC = () => {
         <li key={p.id} className="project">
           <input
             className="radio"
-            id="project-{p.id}"
+            id={`project-${p.id}`}
             name="projects"
             type="radio"
           />
-          <div className="rel">
-            <label htmlFor="project-{p.id}">{p.name}</label>
+          <div className="label-ctnr">
+            <label htmlFor={`project-${p.id}`}>{p.name}</label>
             <span className="date">{dateFormatFR(p.date)}</span>
             <span className="circle"></span>
           </div>

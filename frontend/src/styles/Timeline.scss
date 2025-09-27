@@ -101,24 +101,26 @@
   }
 
   .radio:checked {
-    & + .rel label {
-      cursor: auto;
-      transform: translateX(42px);
-    }
-    .circle {
-      background: var(--red);
-    }
-    & ~ .content {
-      max-height: 180px;
-      border-color: var(--white);
-      margin-right: 20px;
-      transform: translateX(20px);
-      transition: max-height 0.4s linear, border-color 0.5s linear,
-        transform 0.2s linear;
-      p {
-        max-height: 200px;
-        color: var(--white);
-        transition: color 0.3s linear 0.3s;
+    & + .label-ctnr {
+      label {
+        cursor: auto;
+        transform: translateX(42px);
+      }
+      .circle {
+        background: var(--red);
+      }
+      & ~ .content {
+        max-height: 180px;
+        border-color: var(--white);
+        margin-right: 20px;
+        transform: translateX(20px);
+        transition: max-height 0.4s linear, border-color 0.5s linear,
+          transform 0.2s linear;
+        p {
+          max-height: 200px;
+          color: var(--white);
+          transition: color 0.3s linear 0.3s;
+        }
       }
     }
   }
