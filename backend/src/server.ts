@@ -11,7 +11,10 @@ import { Data } from "./db";
   const { Low } = lowdb;
   const { JSONFile } = await import("lowdb/node");
   const adapter = new JSONFile<Data>(join(__dirname, "db.json"));
-  const db = new Low(adapter, { projects: [], posts: [] });
+  const db = new Low(adapter, {
+    projects: [],
+    // posts: []
+  });
 
   await db.read();
 
@@ -32,24 +35,24 @@ import { Data } from "./db";
       res.json(project);
     })
 
-    .get("/api/posts", async (req, res) => {
-      await db.read();
-      console.log("Posts fetched:", db.data.posts);
-      res.json(db.data.posts);
-    })
+    // .get("/api/posts", async (req, res) => {
+    //   await db.read();
+    //   console.log("Posts fetched:", db.data.posts);
+    //   res.json(db.data.posts);
+    // })
 
-    .post("/api/posts", async (req, res) => {
-      const { title, content } = req.body;
-      const post = {
-        id: uuidv4(),
-        title,
-        content,
-        date: new Date().toISOString(),
-      };
-      db.data.posts.push(post);
-      await db.write();
-      res.json(post);
-    })
+    // .post("/api/posts", async (req, res) => {
+    //   const { title, content } = req.body;
+    //   const post = {
+    //     id: uuidv4(),
+    //     title,
+    //     content,
+    //     date: new Date().toISOString(),
+    //   };
+    //   db.data.posts.push(post);
+    //   await db.write();
+    //   res.json(post);
+    // })
 
     .listen(5000, () => console.log("Backend on 5000"));
 })().catch((err) => console.error("DB error:", err));
