@@ -107,7 +107,7 @@
         transform: translateX(42px);
       }
       .circle {
-        background: var(--red);
+        background: var(--sg-red);
       }
       & ~ .content {
         max-height: 180px;
