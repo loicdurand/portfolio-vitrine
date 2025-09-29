@@ -2,7 +2,7 @@
 import { join } from "path";
 import express from "express";
 import cors from "cors";
-import { Data } from "./db";
+import { Data } from "./db/db";
 
 (async function () {
   const mod = import("uuid");
@@ -10,7 +10,7 @@ import { Data } from "./db";
   const lowdb = await import("lowdb");
   const { Low } = lowdb;
   const { JSONFile } = await import("lowdb/node");
-  const adapter = new JSONFile<Data>(join(__dirname, "db.json"));
+  const adapter = new JSONFile<Data>(join(__dirname, "db/db.json"));
   const db = new Low(adapter, {
     projects: [],
     // posts: []
@@ -28,8 +28,8 @@ import { Data } from "./db";
     })
 
     .post("/api/projects", async (req, res) => {
-      const { name, description, date } = req.body;
-      const project = { id: uuidv4(), name, description, date };
+      const data = req.body;
+      const project = { ...data, id: uuidv4() };
       db.data.projects.push(project);
       await db.write();
       res.json(project);

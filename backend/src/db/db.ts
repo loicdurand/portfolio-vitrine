@@ -1,17 +1,11 @@
 import { join } from "path";
-
-export interface Project {
-  id: string;
-  name: string;
-  description: string;
-  date: string;
-}
+import { Project } from "./project";
 
 // export interface Post {
 //   id: string;
 //   title: string;
 //   content: string;
-//   date: string;
+//   startedAt: string;
 // }
 
 export interface Data {

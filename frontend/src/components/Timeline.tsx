@@ -44,7 +44,7 @@ const Timeline: React.FC = () => {
               <i className="fa-brands fa-js"></i>
               {p.name}
             </label>
-            <span className="date">{dateFormatFR(p.date)}</span>
+            <span className="date">{dateFormatFR(p.startedAt)}</span>
             <span className="circle"></span>
           </div>
           <div className="content">

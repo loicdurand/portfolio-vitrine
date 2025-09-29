@@ -1,6 +1,6 @@
 // frontend/src/context/AppContext.tsx
 import React, { createContext, useState, ReactNode } from "react";
-import { Project /*, Post */ } from "../../../backend/src/db";
+import { Project } from "../../../backend/src/db/project";
 
 interface AppContextType {
   projects: Project[];
