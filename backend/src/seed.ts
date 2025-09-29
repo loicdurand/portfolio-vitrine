@@ -30,6 +30,17 @@ async function seed() {
       startedAt: new Date("2025-09-05T08:00:00.000-04:00").toISOString(),
       delivredAt: new Date("2025-09-16T17:00:00.000-04:00").toISOString(),
     },
+    {
+      id: uuidv4(),
+      name: "Accueil - COMGENDGP",
+      description: "Page d'accueil du COMGEND GP",
+      langs: {
+        backend: ["php", "symfony", "mysql"],
+        frontend: ["css"],
+      },
+      startedAt: new Date("2025-05-06T08:00:00.000-04:00").toISOString(),
+      delivredAt: new Date("2025-05-23T17:00:00.000-04:00").toISOString(),
+    },
   ];
   // db.data.posts = [
   //   {

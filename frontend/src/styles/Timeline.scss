@@ -78,7 +78,8 @@
     }
   }
 
-  p {
+  p,
+  small {
     max-height: 0;
     color: transparent;
     text-align: justify;
@@ -116,7 +117,8 @@
         transform: translateX(20px);
         transition: max-height 0.4s linear, border-color 0.5s linear,
           transform 0.2s linear;
-        p {
+        p,
+        small {
           max-height: 200px;
           color: var(--timeline-color);
           transition: color 0.3s linear 0.3s;

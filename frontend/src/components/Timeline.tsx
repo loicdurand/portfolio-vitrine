@@ -48,7 +48,20 @@ const Timeline: React.FC = () => {
             <span className="circle"></span>
           </div>
           <div className="content">
-            <p>{p.description}</p>
+            <small className="langs">
+              Développé avec&nbsp;
+              {p.langs.backend.join(", ")}
+              {p.langs.frontend.length
+                ? (() => (
+                    <>
+                      &nbsp;+
+                      <br />
+                      {p.langs.frontend.join(", ")}
+                    </>
+                  ))()
+                : ""}
+            </small>
+            <p className="description">{p.description}</p>
           </div>
         </li>
       ))}
