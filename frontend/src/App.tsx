@@ -9,7 +9,7 @@ const App: React.FC = () => {
   return (
     <AppProvider>
       <div className="app container">
-        <Bio />
+        {/* <Bio /> */}
         <div className="grid">
           <div className="col s12">
             <Timeline />
