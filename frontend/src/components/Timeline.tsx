@@ -1,20 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { AppContext } from "../context/AppContext";
+import utils from "../utils";
 import Icon from "./Icon";
 import "../styles/Timeline.scss";
 
 const Timeline: React.FC = () => {
   const context = useContext(AppContext);
   const [hasFetched, setHasFetched] = useState(false); // Évite les fetch multiples
-  const dateFormatFR = (ISOStringDate: string) => {
-    const date = new Date(ISOStringDate);
-    return date.toLocaleDateString("fr-FR", {
-      year: "numeric",
-      month: "short",
-      // day: "numeric",
-    });
-  };
 
   useEffect(() => {
     if (!context || hasFetched) return; // Ne fetch que si pas déjà fait
@@ -45,13 +38,18 @@ const Timeline: React.FC = () => {
               <p className="project-icons">
                 {[...project.langs.backend, ...project.langs.frontend].map(
                   (lang) => (
-                    <Icon key={`project-icon-${project.id}`} lang={lang} />
+                    <Icon key={`project-icon-${project.id}`} name={lang} />
                   )
                 )}
               </p>
               {project.name}
             </label>
-            <span className="date">{dateFormatFR(project.startedAt)}</span>
+            <span className="date">
+              {utils.pipe(
+                utils.date.formatDateToFrench,
+                utils.string.capitalize
+              )(project.startedAt)}
+            </span>
             <span className="circle"></span>
           </div>
           <div className="content">
@@ -69,6 +67,21 @@ const Timeline: React.FC = () => {
                 : ""}
             </small>
             <p className="description">{project.description}</p>
+            {project.source !== null ? (
+              <p className="links">
+                <a
+                  title="Afficher le code source - Nouvelle fenêtre"
+                  href={project.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Afficher le code source
+                  <Icon name="external_link" />
+                </a>
+              </p>
+            ) : (
+              ""
+            )}
           </div>
         </li>
       ))}

@@ -11,35 +11,45 @@ async function seed() {
     {
       id: uuidv4(),
       name: "Portfolio",
-      description: "Site vitrine en React/Node",
+      description: `
+      Mon site vitrine: celui que vous êtes en train de consulter. 
+      Réalisé avec Nodejs côté backend, React côté front. 
+      Il me permet de vous présenter mon parcours, mes compétences dans d'autres technologies que Php, et ma volonté de vous rejoindre à Singapour. 
+      J'ai fait le choix de ne pas utiliser de système de design tel que Bootstrap ou Tailwind, afin que vous puissiez vous forger une opinion honnête quant à mes compétences en CSS.`,
       langs: {
-        backend: ["nodejs", "express", "nosql"],
-        frontend: ["react", "typescript", "sass"],
+        backend: ["NodeJS", "Express", "nosql"],
+        frontend: ["React", "TypeScript", "Sass"],
       },
       startedAt: new Date("2025-09-15T21:00:00.000-04:00").toISOString(),
       delivredAt: new Date("2099-12-31T17:00:00.000-04:00").toISOString(),
+      source: "https://github.com/loicdurand/portfolio-vitrine",
     },
     {
       id: uuidv4(),
-      name: "Vote",
-      description: "Site de vote en ligne",
+      name: "Eleksyon 971",
+      description: `
+      Une application permettant à chacun de créer son élection en ligne.
+      L'anonymat du vote est garanti. Pourtant, le scrutin demeure transparent.
+      `,
       langs: {
-        backend: ["php", "symfony", "mysql"],
-        frontend: ["js", "sass"],
+        backend: ["Php", "Symfony", "MySQL"],
+        frontend: ["JS", "Sass"],
       },
       startedAt: new Date("2025-09-05T08:00:00.000-04:00").toISOString(),
       delivredAt: new Date("2025-09-16T17:00:00.000-04:00").toISOString(),
+      source: "https://github.com/loicdurand/vote",
     },
     {
       id: uuidv4(),
       name: "Accueil - COMGENDGP",
-      description: "Page d'accueil du COMGEND GP",
+      description: `Un portail principal, permettant à chaque personnel du COMGENDGP de retrouver facilement ses applications locales.`,
       langs: {
-        backend: ["php", "symfony", "mysql"],
-        frontend: ["css"],
+        backend: ["Php", "Symfony", "MySQL"],
+        frontend: ["CSS"],
       },
       startedAt: new Date("2025-05-06T08:00:00.000-04:00").toISOString(),
       delivredAt: new Date("2025-05-23T17:00:00.000-04:00").toISOString(),
+      source: "https://github.com/loicdurand/accueil",
     },
   ];
   // db.data.posts = [

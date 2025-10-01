@@ -10,4 +10,5 @@ export interface Project {
   langs: Langs;
   startedAt: string;
   delivredAt: string;
+  source: string | null;
 }
