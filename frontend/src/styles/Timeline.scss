@@ -105,7 +105,7 @@
     position: absolute;
     z-index: 100;
     cursor: pointer;
-    top: 1em;
+    top: 6px;
     transition: transform 0.2s linear;
     text-transform: uppercase;
     font-weight: bold;
@@ -122,6 +122,7 @@
       label {
         cursor: auto;
         transform: translateX(42px);
+        margin-top: 6px;
       }
       .circle {
         background: var(--sg-red);
